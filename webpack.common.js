@@ -16,7 +16,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.html',
+      template: './public/index.html',
       chunks: ['index'],
       inject: 'body',
       scriptLoading: 'blocking',
