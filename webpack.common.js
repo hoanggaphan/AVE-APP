@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    index: ['./src/asset/scss/pages/index.scss'],
+    index: ['./src/assets/scss/pages/index.scss'],
   },
 
   output: {
