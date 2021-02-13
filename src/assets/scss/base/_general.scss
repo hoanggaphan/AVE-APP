@@ -1,1 +1,44 @@
+@import '../abstracts/variables';
+
 @import '../vendor/reset';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size-root;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-normal;
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: $wrapper;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: $container;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}

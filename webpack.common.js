@@ -16,7 +16,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './public/index.html',
+      template: './src/views/index.html',
       chunks: ['index'],
       inject: 'body',
       scriptLoading: 'blocking',
@@ -28,10 +28,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-      },
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
       },
     ],
   },

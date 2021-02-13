@@ -1,0 +1,64 @@
+.header {
+  height: 4.5rem;
+  background-color: $color-nightRider-grey;
+
+  .container {
+    height: 100%;
+  }
+}
+
+.top-bar {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.top-bar__left {
+  color: $color-grey;
+  cursor: pointer;
+  transition: color .2s;
+  
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.top-bar__right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.register-signIn {
+  margin: 0 16px;
+  color: $color-nobel-grey;
+  transition: color .2s;
+
+  &:hover {
+    color: $color-egg-blue;
+  }
+}
+
+.top-bar__cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14.7rem;
+  height: 100%;
+
+  margin-left: 7rem;
+  color: $color-white;
+  background-color: $color-egg-blue;
+  cursor: pointer;
+
+  span {
+    margin-left: 20px;
+    margin-right: 8px;
+  }
+}
+
+.cart-icon {
+  font-size: 2rem;
+}
