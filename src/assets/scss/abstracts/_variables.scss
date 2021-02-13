@@ -1,0 +1,67 @@
+// Max width and container width in blueprint 
+
+$wrapper: 2050px;
+$container: 1200px;
+
+//
+
+
+
+// Color System
+
+// white
+$color-white: #ffffff;
+$color-smoke-white: #f8f8f8;
+$color-gainsboro-white: #e7e7e7;
+
+// black
+$color-black: #000;
+
+// grey
+$color-grey: #777777;
+$color-empress-grey: #737373;
+$color-dim-grey: #727272;
+$color-nobel-grey: #999999;
+// @use "sass:color";
+// color.adjust($color-nobel-grey, $lightness: +0.5%); // #9a9a9a
+$color-shadyLady-grey: #989898;
+$color-mortar-grey: #575153;
+$color-steel-grey: #454647;
+$color-nightRider-grey: #333333;
+$color-nero-grey: #222222;
+$color-taupe-grey: #8e8c8d;
+
+// blue
+$color-egg-blue: #00c8c8;
+
+// End Color System
+
+
+
+// Body
+//
+// Setting for <body> element
+
+$body-bg: $color-white;
+$body-color: $color-dim-grey;
+
+// End Body
+
+
+
+// Typography
+//
+// Font, line-height, headings.
+
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Roboto Mono', monospace;
+
+$font-weight-light: 300;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+// font-size-root effects the font size of body text
+// 1rem = 10px
+$font-size-root: 62.5%; 
+
+// End Typography

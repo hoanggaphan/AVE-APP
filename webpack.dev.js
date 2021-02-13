@@ -24,7 +24,7 @@ module.exports = merge(common, {
     hot: true,
     port: 3000,
     publicPath: '/',
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'src/views'),
     watchContentBase: true,
   },
 });
