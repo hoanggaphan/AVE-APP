@@ -1,15 +1,14 @@
-.header {
-  height: 4.5rem;
+.top-bar {
   background-color: $color-nightRider-grey;
-
+  height: 4.5rem;
   .container {
     height: 100%;
   }
 }
 
-.top-bar {
-  display: flex;
+.top-bar-container {
   height: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.3rem;
@@ -18,8 +17,8 @@
 .top-bar__left {
   color: $color-grey;
   cursor: pointer;
-  transition: color .2s;
-  
+  transition: color 0.3s;
+
   &:hover {
     color: $color-white;
   }
@@ -32,9 +31,9 @@
 }
 
 .register-signIn {
-  margin: 0 16px;
+  margin: 0 1.6rem;
   color: $color-nobel-grey;
-  transition: color .2s;
+  transition: color 0.3s;
 
   &:hover {
     color: $color-egg-blue;
@@ -54,8 +53,8 @@
   cursor: pointer;
 
   span {
-    margin-left: 20px;
-    margin-right: 8px;
+    margin-left: 2rem;
+    margin-right: 0.8rem;
   }
 }
 
