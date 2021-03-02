@@ -1,3 +1,6 @@
+// Mixin for button
+//
+
 @mixin button($color, $bg-color, $border-color, $color-hover, $bg-color-hover, $border-color-hover) {
   padding: 2rem 3rem;
   color: $color;
@@ -11,3 +14,45 @@
     border-color: $border-color-hover;
   }
 }
+
+// End Mixin for button
+
+
+
+// Mixin for responsive
+//
+// Resolution is obtained from Material UI
+
+// $XS: 0; 
+$SM: 600px; 
+$MD: 960px;  
+$LG: 1280px;  
+$XL: 1920px;  
+
+@mixin Responsive($canvas) {
+  @if $canvas == SM {
+    @media only screen and(min-width: $SM) {
+      @content;
+    }
+  }
+
+  @if $canvas == MD {
+    @media only screen and(min-width: $MD) {
+      @content;
+    }
+  }
+
+  @if $canvas == LG {
+    @media only screen and(min-width: $LG) {
+      @content;
+    }
+  }
+
+  @if $canvas == XL {
+    @media only screen and(min-width: $XL) {
+      @content;
+    }
+  }
+}
+
+// End Mixin for responsive
