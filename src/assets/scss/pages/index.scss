@@ -2,18 +2,12 @@
 @import '../base/general';
 
 // Components
-@import '../components/top-bar';
-@import '../components/navbar';
-
-.navbar-slider-container {
-  position: relative;
-  height: calc(100vh - 4.5rem);
-  background-color: $color-smoke-white;
-}
+@import '../components/header';
 
 .slider {
   position: relative;
-  height: 100%;
+  height: calc(50vh - 4.5rem);
+  background-color: $color-smoke-white;
 }
 
 .slide {
@@ -45,7 +39,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: 18%;
+  object-position: 80%;
   -webkit-user-drag: none;
 }
 
@@ -55,12 +49,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  display: none;
   max-width: 153rem;
-  width: 100%;
-  display: flex;
+  width: 70%;
   justify-content: space-around;
 
-  font-size: 20vw;
+  font-size: 15vw;
   font-weight: bold;
   color: $color-mortar-grey;
   user-select: none;
@@ -77,9 +71,10 @@
   );
 
   position: absolute;
-  bottom: 13%;
-  right: 15%;
+  bottom: 10%;
+  right: 5%;
 
+  display: none;
   font-size: 1.6rem;
   font-weight: normal;
   text-transform: uppercase;
@@ -348,7 +343,7 @@
   justify-content: space-around;
 
   background-color: $color-smoke-white;
-  padding: 2.5rem 2rem 0;
+  padding: 2.5rem 1.5rem 0;
 }
 
 .look-books-img {
@@ -402,6 +397,12 @@
 }
 
 @include Responsive(SM) {
+  .slide-img {
+    object-position: 40%;
+  }
+  .slide-text {
+    display: flex;
+  }
   .products-container {
     padding: 0 3.5rem;
   }
@@ -417,6 +418,20 @@
 }
 
 @include Responsive(MD) {
+  .slider {
+    height: calc(100vh - 4.5rem);
+  }
+  .slide-img {
+    object-position: 18%;
+  }
+  .slide-text {
+    width: 100%;
+    font-size: 20vw;
+  }
+  .slide-btn {
+    display: block;
+  }
+
   .nav-tabs {
     justify-content: left;
 
@@ -487,6 +502,11 @@
 }
 
 @include Responsive(LG) {
+  .slide-btn {
+    bottom: 13%;
+    right: 15%;
+  }
+
   .gallery__item--01 {
     grid-column: 1 / span 1;
     grid-row: 1 / span 5;

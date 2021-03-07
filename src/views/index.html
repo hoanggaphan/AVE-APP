@@ -20,55 +20,48 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <%=require('html-loader!./components/top-bar.html')%>
-
-        <div class="navbar-slider-container">
-          <%=require('html-loader!./components/navbar.html')%>
-
-          <div class="slider">
-            <div class="slide">
-              <img class="slide-img"
-              src=<%=require('../assets/images/slide-0.png')%> alt="">
-              <div class="slide-text">
-                <span>A</span>
-                <span>V</span>
-                <span>E</span>
-              </div>
-
-              <a class="slide-btn" href="#">Shop men's collection</a>
+      <%=require('html-loader!./components/header.html')%>
+      
+      <main>
+        <div class="slider">
+          <div class="slide">
+            <img class="slide-img"
+            src=<%=require('../assets/images/slide-0.png')%> alt="">
+            <div class="slide-text">
+              <span>A</span>
+              <span>V</span>
+              <span>E</span>
             </div>
-
-            <div class="slide">
-              <img class="slide-img"
-              src=<%=require('../assets/images/item-02.png')%> alt="">
-
-              <div class="slide-text">
-                <span>A</span>
-                <span>V</span>
-                <span>E</span>
-              </div>
-
-              <a class="slide-btn" href="#">Shop women's collection</a>
+  
+            <a class="slide-btn" href="#">Shop men's collection</a>
+          </div>
+  
+          <div class="slide">
+            <img class="slide-img"
+            src=<%=require('../assets/images/item-02.png')%> alt="">
+  
+            <div class="slide-text">
+              <span>A</span>
+              <span>V</span>
+              <span>E</span>
             </div>
-
-            <div class="slide">
-              <img class="slide-img"
-              src=<%=require('../assets/images/item-06.png')%> alt="">
-              <div class="slide-text">
-                <span>S</span>
-                <span>A</span>
-                <span>L</span>
-                <span>E</span>
-              </div>
-
-              <a class="slide-btn" href="#">sale off</a>
+  
+            <a class="slide-btn" href="#">Shop women's collection</a>
+          </div>
+  
+          <div class="slide">
+            <img class="slide-img"
+            src=<%=require('../assets/images/item-06.png')%> alt="">
+            <div class="slide-text">
+              <span>S</span>
+              <span>A</span>
+              <span>L</span>
+              <span>E</span>
             </div>
+  
+            <a class="slide-btn" href="#">sale off</a>
           </div>
         </div>
-      </header>
-
-      <main>
         <div class="products-container">
           <div class="products">
             <ul class="nav-tabs">
