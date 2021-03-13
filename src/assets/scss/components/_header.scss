@@ -3,7 +3,6 @@
   height: 4.5rem;
   .container {
     height: 100%;
-    padding-right: 0;
   }
 }
 
@@ -39,6 +38,10 @@
   &:hover {
     color: $color-egg-blue;
   }
+}
+
+.signIn {
+  margin-right: 0;
 }
 
 .top-bar__cart {
@@ -463,12 +466,6 @@ div#close-search-area {
 }
 
 @include Responsive(SM) {
-  .top-bar {
-    .container {
-      padding-right: 1.5rem;
-    }
-  }
-
   .navbar {
     padding: 3.5rem;
   }
@@ -494,7 +491,9 @@ div#close-search-area {
   .top-bar__cart {
     display: flex;
   }
-
+  .signIn {
+    margin-right: 1.6rem;
+  }
   .navbar {
     align-items: center;
   }
