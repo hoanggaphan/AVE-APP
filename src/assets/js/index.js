@@ -1,3 +1,7 @@
+import { lazyLoadImages } from './helpers'
+
+lazyLoadImages();
+
 const tabs = document.querySelectorAll('[data-tab-target]');
 
 tabs.forEach((tab) => {
@@ -117,4 +121,4 @@ collapses.forEach(collapse => {
     
     expandElement(list);
   }
-)})
+)});
