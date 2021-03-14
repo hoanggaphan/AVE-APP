@@ -5,6 +5,7 @@ const path = require('path');
 module.exports = {
   entry: {
     index: ['./src/assets/js/index.js', './src/assets/scss/pages/index.scss'],
+    brand: ['./src/assets/js/brand.js', './src/assets/scss/pages/brand.scss'],
   },
 
   output: {
@@ -18,6 +19,13 @@ module.exports = {
       filename: 'index.html',
       template: './src/views/index.html',
       chunks: ['index'],
+      inject: 'body',
+      scriptLoading: 'blocking',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'brand.html',
+      template: './src/views/brand.html',
+      chunks: ['brand'],
       inject: 'body',
       scriptLoading: 'blocking',
     }),

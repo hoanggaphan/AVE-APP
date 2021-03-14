@@ -1,9 +1,8 @@
 /*
  * ----------------------------------------
- * Add default functions for home page
+ * Add default functions for brand page
  * ----------------------------------------
  */
 
 import './default';
 import './collapse';
-import './nav-tab';
