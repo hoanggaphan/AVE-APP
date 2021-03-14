@@ -1,4 +1,4 @@
-function lazyLoadImages() {
+export function lazyLoadImages() {
   if ('loading' in HTMLImageElement.prototype) {
     const images = document.querySelectorAll('img[loading="lazy"]');
     images.forEach((img) => {
@@ -13,4 +13,6 @@ function lazyLoadImages() {
   }
 }
 
-export { lazyLoadImages };
+export function hasClass(element, classes) {
+  return element.classList.contains(classes);
+}
