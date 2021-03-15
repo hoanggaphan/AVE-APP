@@ -91,17 +91,18 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: unset;
+  align-items: center;
 
   height: 11rem;
   max-width: 181.5rem;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 3.5rem;
+  padding-left: 1.5rem;
   background-color: transparent;
 }
 
 .navbar__brand {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: $color-nero-grey;
   display: inline-block;
   cursor: pointer;
@@ -469,11 +470,7 @@ div#close-search-area {
 
 @include Responsive(SM) {
   .navbar {
-    padding: 3.5rem;
-  }
-
-  .navbar__brand {
-    font-size: 2rem;
+    padding-left: 3.5rem;
   }
 
   .navbar__toggle {
@@ -495,9 +492,6 @@ div#close-search-area {
   }
   .signIn {
     margin-right: 1.6rem;
-  }
-  .navbar {
-    align-items: center;
   }
   .navbar__nav {
     display: flex;

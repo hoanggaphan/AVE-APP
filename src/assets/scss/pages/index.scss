@@ -7,6 +7,7 @@
 @import '../components/footer';
 
 .slider {
+  margin-top: 11rem;
   position: relative;
   height: calc(50vh - 4.5rem);
   background-color: $color-smoke-white;
@@ -41,7 +42,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: 80%;
+  object-position: 50%;
   -webkit-user-drag: none;
 }
 
@@ -51,12 +52,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  display: none;
-  max-width: 153rem;
-  width: 70%;
+  display: flex;
   justify-content: space-around;
+  max-width: 153rem;
+  width: 100%;
+  margin: 0 auto;
 
-  font-size: 15vw;
+  font-size: 20vw;
   font-weight: bold;
   color: $color-mortar-grey;
   user-select: none;
@@ -379,11 +381,14 @@
 }
 
 @include Responsive(SM) {
-  .slide-img {
-    object-position: 40%;
+  .slider {
+    height: calc(70vh - 4.5rem);
   }
-  .slide-text {
-    display: flex;
+  .slide-img {
+    object-position: 18%;
+  }
+  .slide-btn {
+    display: block;
   }
   .products-container {
     padding: 0 3.5rem;
@@ -400,20 +405,6 @@
 }
 
 @include Responsive(MD) {
-  .slider {
-    height: calc(100vh - 4.5rem);
-  }
-  .slide-img {
-    object-position: 18%;
-  }
-  .slide-text {
-    width: 100%;
-    font-size: 20vw;
-  }
-  .slide-btn {
-    display: block;
-  }
-
   .nav-tabs {
     justify-content: left;
 
@@ -484,6 +475,11 @@
 }
 
 @include Responsive(LG) {
+  .slider {
+    margin-top: 0;
+    height: calc(100vh - 4.5rem);
+  }
+
   .slide-btn {
     bottom: 13%;
     right: 15%;
