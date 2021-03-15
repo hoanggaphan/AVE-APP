@@ -21,7 +21,17 @@
   <body>
     <div class="wrapper">
       <%=require('html-loader!./components/header.html')%>
+      <main>
+        <div class="intro">
+          <img class="intro__img" src=<%=require('../assets/images/brand-bg.jpg')%> alt="brand background">
+          <div class="intro__cover"></div>
 
+          <div class="intro__content">
+            <h2 class="intro__title"><b>The</b> brand</h2>
+            <p class="intro__slogan">company slogan goes here</p>
+          </div>
+        </div>
+      </main>
       <%=require('html-loader!./components/footer.html')%>
     </div>
   </body>

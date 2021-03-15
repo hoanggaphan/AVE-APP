@@ -18,6 +18,19 @@
 // End Mixin for button
 
 
+// Mixin for font size
+//
+
+@mixin font-size($font-size, $font-weight, $text-transform, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  color: $color;
+}
+
+// End Mixin for button
+
+
 
 // Mixin for responsive
 //
