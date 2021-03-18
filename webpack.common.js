@@ -7,6 +7,7 @@ module.exports = {
     index: ['./src/assets/js/index.js', './src/assets/scss/pages/index.scss'],
     brand: ['./src/assets/js/brand.js', './src/assets/scss/pages/brand.scss'],
     localStores: ['./src/assets/js/local-stores.js', './src/assets/scss/pages/local-stores.scss'],
+    lookBook: ['./src/assets/js/look-book.js', './src/assets/scss/pages/look-book.scss'],
   },
 
   output: {
@@ -34,6 +35,13 @@ module.exports = {
       filename: 'local-stores.html',
       template: './src/views/local-stores.html',
       chunks: ['localStores'],
+      inject: 'body',
+      scriptLoading: 'blocking',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'look-book.html',
+      template: './src/views/look-book.html',
+      chunks: ['lookBook'],
       inject: 'body',
       scriptLoading: 'blocking',
     }),

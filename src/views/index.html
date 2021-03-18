@@ -355,50 +355,7 @@
           </div>
         </div>
 
-        <div class="look-books">
-          <div class="look-books-item">
-            <img class="look-books-img lazyload"
-            data-src=<%=require('../assets/images/item-07.png')%> alt="look
-            books 1" loading="lazy">
-            <div class="look-books-info">
-              <h4>Men's</h4>
-              <h4>Lookbook</h4>
-              <p>
-                consequuntur eos rerum ad magni dolorum commodi earum, aliquid
-                harum! Suscipit, ad.
-              </p>
-              <a href="#" class="look-books-btn">View Now</a>
-            </div>
-          </div>
-          <div class="look-books-item">
-            <img class="look-books-img lazyload"
-            data-src=<%=require('../assets/images/item-07.png')%> alt="look
-            books 2" loading="lazy">
-            <div class="look-books-info">
-              <h4>Women's</h4>
-              <h4>Lookbook</h4>
-              <p>
-                consequuntur eos rerum ad magni dolorum commodi earum, aliquid
-                harum! Suscipit, ad.
-              </p>
-              <a href="#" class="look-books-btn">View Now</a>
-            </div>
-          </div>
-          <div class="look-books-item">
-            <img class="look-books-img lazyload"
-            data-src=<%=require('../assets/images/item-09.png')%> alt="look
-            books 3" loading="lazy">
-            <div class="look-books-info">
-              <h4>Your</h4>
-              <h4>Lookbook</h4>
-              <p>
-                consequuntur eos rerum ad magni dolorum commodi earum, aliquid
-                harum! Suscipit, ad.
-              </p>
-              <a href="#" class="look-books-btn">View Now</a>
-            </div>
-          </div>
-        </div>
+        <%=require('html-loader?interpolate!./components/list-look-book.html') %>
       </main>
       <%=require('html-loader!./components/footer.html')%>
     </div>
