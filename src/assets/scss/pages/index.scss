@@ -6,6 +6,7 @@
 // Components
 @import '../components/header';
 @import '../components/footer';
+@import '../components/list-look-book';
 
 .slider {
   margin-top: 11rem;
@@ -305,72 +306,6 @@
       background-color: $color-egg-blue;
     }
   }
-}
-
-.look-books {
-  margin-top: 6rem;
-  display: grid;
-  grid-template-columns: repeat(1, 100%);
-  grid-gap: 1.5vw;
-}
-
-.look-books-item {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-
-  background-color: $color-smoke-white;
-  padding: 2.5rem 1.5rem 0;
-}
-
-.look-books-img {
-  margin-right: 2rem;
-  width: 15rem;
-  height: 30rem;
-}
-
-.look-books-info {
-  margin-top: 2rem;
-  text-align: right;
-
-  h4 {
-    margin-bottom: 1.5rem;
-    font-weight: lighter;
-    color: $color-mortar-grey;
-    text-transform: uppercase;
-    font-size: 2rem;
-
-    &:first-child {
-      font-weight: bold;
-    }
-  }
-
-  p {
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
-    font-size: 1.3rem;
-    color: $color-dim-grey;
-    line-height: 1.4;
-  }
-}
-
-.look-books-btn {
-  @include button(
-    $color-steel-grey,
-    transparent,
-    $color-empress-grey,
-    $color-smoke-white,
-    $color-egg-blue,
-    $color-egg-blue
-  );
-
-  padding: 1rem 1.8rem;
-  display: inline-block;
-
-  font-size: 1.3rem;
-  font-weight: normal;
-  text-transform: uppercase;
-  word-spacing: 3px;
 }
 
 @include Responsive(SM) {

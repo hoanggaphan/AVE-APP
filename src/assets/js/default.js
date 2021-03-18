@@ -68,7 +68,7 @@ dropdowns.forEach((dropdown) => {
 
 /*
  * ----------------------------------------
- * Toggle show/hide for search area in mobile
+ * Toggle show/hide for toggle menu in mobile
  * ----------------------------------------
  */
 

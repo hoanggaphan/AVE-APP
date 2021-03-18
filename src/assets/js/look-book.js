@@ -1,6 +1,6 @@
 /*
  * ----------------------------------------
- * Add default functions for local stores page
+ * Add default functions for look book page
  * ----------------------------------------
  */
 
