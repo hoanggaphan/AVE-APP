@@ -1,6 +1,7 @@
 // Base
 @import '../base/general';
 @import '../base/animations';
+@import '../base/helper';
 
 // Components
 @import '../components/header';
@@ -120,14 +121,6 @@
       color: $color-egg-blue;
     }
   }
-}
-
-[data-tab-content] {
-  display: none;
-}
-
-.is-tab-active[data-tab-content] {
-  display: block;
 }
 
 .gallery {

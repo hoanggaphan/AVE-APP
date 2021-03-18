@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: ['./src/assets/js/index.js', './src/assets/scss/pages/index.scss'],
     brand: ['./src/assets/js/brand.js', './src/assets/scss/pages/brand.scss'],
+    localStores: ['./src/assets/js/local-stores.js', './src/assets/scss/pages/local-stores.scss'],
   },
 
   output: {
@@ -26,6 +27,13 @@ module.exports = {
       filename: 'brand.html',
       template: './src/views/brand.html',
       chunks: ['brand'],
+      inject: 'body',
+      scriptLoading: 'blocking',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'local-stores.html',
+      template: './src/views/local-stores.html',
+      chunks: ['localStores'],
       inject: 'body',
       scriptLoading: 'blocking',
     }),
