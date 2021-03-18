@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%=require('html-loader!./components/header.html')%>
+      <main>
+        <div class="brand">
+          <img class="brand__img"
+          src=<%=require('../assets/images/brand-bg.jpg')%> alt="brand
+          background">
+          <div class="brand__cover"></div>
+
+          <div class="brand__content">
+            <h2 class="brand__title"><b>Local</b> stores</h2>
+            <p class="brand__slogan">Find a store near you</p>
+          </div>
+        </div>
+
+        <div class="locations">
+          <div class="container">
+            <div class="locations__content">
+              <div class="locations__cols">
+                <h3 class="locations__name">London</h3>
+                <p class="locations__address">180-182 Regent Street, London, W1B 5BT</p>
+                <p class="locations__info">Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem. Vestibulum ornare eleifendit massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.</p>
+                <div class="locations__button" data-tab-target="#london">View Details</div>
+              </div>
+              <div class="locations__cols">
+                <h3 class="locations__name">New York</h3>
+                <p class="locations__address">109 Columbus Circle, New York, NY 10023</p>
+                <p class="locations__info">Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem. Vestibulum ornare eleifendit massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.</p>
+                <div class="locations__button" data-tab-target="#new-york">View Details</div>
+              </div>
+              <div class="locations__cols">
+                <h3 class="locations__name">Paris</h3>
+                <p class="locations__address">2133 Rue Saint-Honoré, 75001 Paris</p>
+                <p class="locations__info">Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem. Vestibulum ornare eleifendit massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.</p>
+                <div class="locations__button" data-tab-target="#paris">View Details</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="is-tab-active" id="london" data-tab-content>
+            <div class="locations__map-detail">
+              <div class="locations__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.040684901662!2d-0.14200518422985065!3d51.51246957963597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d5767c9015%3A0x1cf0ab0381c7fd45!2s180%20Regent%20St%2C%20Soho%2C%20London%20W1B%205TJ%2C%20UK!5e0!3m2!1sen!2s!4v1616062195112!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <div class="locations__detail">
+                <h3 class="locations__detail-name">London</h3>
+                <p class="locations__detail-address">180-182 Regent Street, London, W1B 5BT</p>
+                <p class="locations__detail-info">Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem. Vestibulum ornare eleifendit massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.</p>
+
+                <div class="locations__list-info">
+                  <div class="locations__list-item">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span>180-182 Regent Street, London, W1B 5BT</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-phone"></i>
+                    <span>0123-456-789</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-link"></i>
+                    <span>www.yourwebsite.com</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>support@yourwebsite.com</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-clock"></i>
+                    <span>Monday-Friday: 9am to 6pm  Saturday: 10am to 6pm  Sunday: 10am to 2pm</span>
+                  </div>
+                </div>
+
+                <div class="locations__socials">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div id="new-york" data-tab-content>
+            <div class="locations__map-detail">
+              <div class="locations__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.714833325958!2d-73.98444318459332!3d40.76829637932581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f63cf10429%3A0x21ea18a2c52e7ca7!2s109%20Columbus%20Cir%2C%20New%20York%2C%20NY%2010019%2C%20USA!5e0!3m2!1sen!2s!4v1616063999033!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <div class="locations__detail">
+                <h3 class="locations__detail-name">New York</h3>
+                <p class="locations__detail-address">109 Columbus Circle, New York, NY 10023</p>
+                <p class="locations__detail-info">Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem. Vestibulum ornare eleifendit massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.</p>
+
+                <div class="locations__list-info">
+                  <div class="locations__list-item">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span>109 Columbus Circle, New York, NY 10023</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-phone"></i>
+                    <span>0123-456-789</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-link"></i>
+                    <span>www.yourwebsite.com</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>support@yourwebsite.com</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-clock"></i>
+                    <span>Monday-Friday: 9am to 6pm  Saturday: 10am to 6pm  Sunday: 10am to 2pm</span>
+                  </div>
+                </div>
+
+                <div class="locations__socials">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="paris" data-tab-content>
+            <div class="locations__map-detail">
+              <div class="locations__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6564612126663!2d2.33013881555523!3d48.86476097928819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e257ab8a9d9%3A0x60ac8c5b948a55ef!2sRue%20Saint-Honor%C3%A9%2C%20Paris%2C%20France!5e0!3m2!1sen!2s!4v1616064061922!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <div class="locations__detail">
+                <h3 class="locations__detail-name">Paris</h3>
+                <p class="locations__detail-address">2133 Rue Saint-Honoré, 75001 Paris</p>
+                <p class="locations__detail-info">Lorem ipsum dolor sit amet, consectetur adipiscing esi elit. Vivamus at arcu sem. Vestibulum ornare eleifendit massa, nec tempor odio. Fusce posuere nunc iaculis ligula viverra iaculis. Aliquam erat volutpat.</p>
+
+                <div class="locations__list-info">
+                  <div class="locations__list-item">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span>2133 Rue Saint-Honoré, 75001 Paris</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-phone"></i>
+                    <span>0123-456-789</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-link"></i>
+                    <span>www.yourwebsite.com</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>support@yourwebsite.com</span>
+                  </div>
+                  <div class="locations__list-item">
+                    <i class="fa fa-clock"></i>
+                    <span>Monday-Friday: 9am to 6pm  Saturday: 10am to 6pm  Sunday: 10am to 2pm</span>
+                  </div>
+                </div>
+
+                <div class="locations__socials">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%=require('html-loader!./components/footer.html')%>
+    </div>
+  </body>
+</html>
