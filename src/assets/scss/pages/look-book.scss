@@ -5,5 +5,274 @@
 
 // Components
 @import '../components/header';
-@import '../components/footer';
+@import '../components/nav-tabs';
+@import '../components/brand-ele';
 @import '../components/list-look-book';
+@import '../components/footer';
+
+.products-container {
+  max-width: 181.5rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  margin-top: 6rem;
+}
+
+.products {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.gallery {
+  @include Grid(
+    1,
+    1fr,
+    9,
+    60vw,
+    1.5vw
+  ); // columns, columns-width, row, row-height, gap
+}
+
+.gallery__item {
+  position: relative;
+  background-color: $color-smoke-white;
+  cursor: pointer;
+  transition: filter 0.3s;
+
+  @media (hover: hover) {
+    .gallery__hover {
+      display: flex;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.15));
+      position: relative;
+      z-index: 2;
+
+      .gallery__hover {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.gallery__item--01 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.gallery__item--02 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.gallery__item--03 {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.gallery__item--04 {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.gallery__item--05 {
+  grid-column: 1 / span 1;
+  grid-row: 5 / span 1;
+}
+
+.gallery__item--06 {
+  grid-column: 1 / span 1;
+  grid-row: 6 / span 1;
+}
+
+.gallery__item--07 {
+  grid-column: 1 / span 1;
+  grid-row: 7 / span 1;
+}
+
+.gallery__item--08 {
+  grid-column: 1 / span 1;
+  grid-row: 8 / span 1;
+}
+
+.gallery__item--09 {
+  grid-column: 1 / span 1;
+  grid-row: 9 / span 1;
+}
+
+.gallery__item--03, 
+.gallery__item--08 {
+  .gallery__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+
+  img {
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.gallery__price {
+  @include font-size(2.1rem, lighter, unset, uppercase, $color-nobel-grey);
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+
+  sup {
+    font-size: 1.2rem;
+    vertical-align: top;
+    margin-right: 2px;
+  }
+}
+
+.gallery__hover {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.gallery__hover-details-link {
+  img {
+    margin: 0 1.5rem;
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}
+
+@include Responsive(SM) {
+  .products-container {
+    padding: 0 3.5rem;
+  }
+}
+
+@include Responsive(MD) {
+  .gallery {
+    @include Grid(
+      2,
+      1fr,
+      6,
+      35vw,
+      1.5vw
+    ); // columns, columns-width, row, row-height, gap
+  }
+
+  .gallery__item--01 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  
+  .gallery__item--02 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+  
+  .gallery__item--03 {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+  }
+  
+  .gallery__item--04 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  
+  .gallery__item--05 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+  
+  .gallery__item--06 {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  
+  .gallery__item--07 {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+  
+  .gallery__item--08 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 1;
+  }
+  
+  .gallery__item--09 {
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+  }
+}
+
+@include Responsive(LG) {
+  .gallery {
+    @include Grid(
+      4,
+      1fr,
+      3,
+      50rem,
+      1.5vw
+    ); // columns, columns-width, row, row-height, gap
+  }
+
+  .gallery__item--01 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  
+  .gallery__item--02 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+  
+  .gallery__item--03 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+  }
+  
+  .gallery__item--04 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  .gallery__item--05 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  .gallery__item--06 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  .gallery__item--07 {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  .gallery__item--08 {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+  }
+  
+  .gallery__item--09 {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+  }
+}
+

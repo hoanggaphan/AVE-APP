@@ -1,0 +1,32 @@
+.nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $color-dim-grey;
+
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-egg-blue;
+    }
+  }
+}
+
+@include Responsive(MD) {
+  .nav-tabs {
+    justify-content: left;
+
+    li {
+      margin-bottom: 6rem;
+    }
+  }
+}

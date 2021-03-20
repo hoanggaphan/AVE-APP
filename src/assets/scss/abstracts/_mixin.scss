@@ -18,6 +18,19 @@
 // End Mixin for button
 
 
+// Mixin for Grid
+//
+
+@mixin Grid($columns, $columns-width, $rows, $rows-height, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, $columns-width);
+  grid-template-rows: repeat($rows, $rows-height);
+  gap: $gap;
+}
+
+// End Mixin for Grid
+
+
 // Mixin for font text
 //
 
@@ -38,7 +51,6 @@
 }
 
 // End Mixin for text
-
 
 
 // Mixin for responsive

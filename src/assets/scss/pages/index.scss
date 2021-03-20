@@ -7,6 +7,7 @@
 @import '../components/header';
 @import '../components/footer';
 @import '../components/list-look-book';
+@import '../components/nav-tabs';
 
 .slider {
   margin-top: 11rem;
@@ -101,34 +102,14 @@
   border-bottom: 1px solid #eee;
 }
 
-.nav-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  li {
-    margin-right: 5rem;
-    margin-bottom: 3rem;
-
-    font-size: 1.3rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: $color-dim-grey;
-
-    cursor: pointer;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $color-egg-blue;
-    }
-  }
-}
-
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(36, 10vw);
-  grid-gap: 1.5vw;
+  @include Grid(
+    4,
+    1fr,
+    36,
+    10vw,
+    1.5vw
+  ); // columns, columns-width, row, row-height, gap
 }
 
 .gallery__item {
@@ -146,7 +127,7 @@
       filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.15));
       position: relative;
       z-index: 2;
-  
+
       .gallery__hover {
         visibility: visible;
         opacity: 1;
@@ -218,11 +199,6 @@
   transition: all 0.3s;
 }
 
-.gallery__hover-thumb {
-  width: 100%;
-  height: 100%;
-}
-
 .gallery__hover-thumb-front,
 .gallery__hover-thumb-back {
   position: absolute;
@@ -267,12 +243,8 @@
   }
 
   h5 {
+    @include font-size(1.3rem, normal, 1.6, uppercase, $color-dim-grey);
     margin-bottom: 2rem;
-    font-size: 1.3rem;
-    font-weight: normal;
-    line-height: 1.6rem;
-    color: $color-dim-grey;
-    text-transform: uppercase;
   }
 
   p {
@@ -321,84 +293,49 @@
   .products-container {
     padding: 0 3.5rem;
   }
-
   .gallery {
     grid-template-rows: repeat(36, 5vw);
-  }
-
-  .look-books-info {
-    margin-top: 2rem;
-    text-align: center;
   }
 }
 
 @include Responsive(MD) {
-  .nav-tabs {
-    justify-content: left;
-
-    li {
-      margin-bottom: 6rem;
-    }
-  }
-
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 5vw);
-    grid-gap: 1.5vw;
+    @include Grid(
+      4,
+      1fr,
+      12,
+      5vw,
+      1.5vw
+    ); // columns, columns-width, row, row-height, gap
   }
   .gallery__item--01 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 4;
   }
-  
+
   .gallery__item--02 {
     grid-column: 3 / span 2;
     grid-row: 1 / span 4;
   }
-  
+
   .gallery__item--03 {
     grid-column: 1 / span 2;
     grid-row: 5 / span 4;
   }
-  
+
   .gallery__item--04 {
     grid-column: 3 / span 2;
     grid-row: 5 / span 4;
   }
-  
+
   .gallery__item--05 {
     grid-column: 1 / span 2;
     grid-row: 9 / span 4;
   }
-  
+
   .gallery__item--06 {
     grid-column: 3 / span 2;
     grid-row: 9 / span 4;
-  }
-
-  .look-books {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .look-books-info {
-    text-align: right;
-    margin-top: 0;
-
-    p {
-      margin-top: 2rem;
-      margin-bottom: 3.5rem;
-    }
-  }
-
-  .look-books-img {
-    margin-right: 2rem;
-    width: 12rem;
-    height: 26rem;
-  }
-
-  .look-books-item {
-    flex-wrap: nowrap;
   }
 }
 
@@ -412,72 +349,34 @@
     bottom: 13%;
     right: 15%;
   }
-
+  
   .gallery__item--01 {
     grid-column: 1 / span 1;
     grid-row: 1 / span 5;
   }
-  
+
   .gallery__item--02 {
     grid-column: 2 / span 1;
     grid-row: 1 / span 5;
   }
-  
+
   .gallery__item--03 {
     grid-column: 3 / span 2;
     grid-row: 1 / span 7;
   }
-  
+
   .gallery__item--04 {
     grid-column: 1 / span 2;
     grid-row: 6 / span 7;
   }
-  
+
   .gallery__item--05 {
     grid-column: 3 / span 1;
     grid-row: 8 / span 5;
   }
-  
+
   .gallery__item--06 {
     grid-column: 4 / span 1;
     grid-row: 8 / span 5;
-  }
-
-  .look-books-btn {
-    padding: 2rem 3rem;
-    font-size: 1.6rem;
-  }
-
-  .look-books-info {
-    h4 {
-      font-size: 2.8rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
-  .look-books-img {
-    width: 18rem;
-    height: 36rem;
-  }
-}
-
-@include Responsive(XL) {
-  .look-books-info {
-    h4 {
-      font-size: 4.8rem;
-    }
-  }
-
-  .look-books-item {
-    padding: 4.5rem 4rem 0;
-  }
-
-  .look-books-img {
-    margin-right: 3rem;
-    width: 24rem;
-    height: 48rem;
   }
 }
