@@ -1,0 +1,221 @@
+// Base
+@import '../base/general';
+
+// Components
+@import '../components/header';
+@import '../components/brand-ele';
+@import '../components/footer';
+
+.signIn-register {
+  margin-top: 6rem;
+}
+
+.signIn-register__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
+}
+
+.signIn, .register {
+  width: 100%;
+  padding: 0;
+}
+
+.signIn {
+  border-right: none;
+}
+
+.form-label {
+  @include font-size(1.8rem, normal, unset, uppercase, $color-mortar-grey);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  @include font-size(1.5rem, lighter, unset, unset, $color-mortar-grey);
+  
+  padding: 1.5rem 1rem;
+  margin: .7rem 0;
+  width: 100%;
+  display: inline-block;
+
+  border: none;
+  outline: none;
+  border: 2px solid $color-gainsboro-white;
+
+  &::placeholder {
+    color: $color-shadyLady-grey;
+  }
+
+  &:focus {
+    border: 2px solid $color-egg-blue;
+  }
+}
+
+.is-error {
+  border: 2px solid $color-blush-red;
+  background-color: $color-amour-violet;
+
+  &:focus {
+    border: 2px solid $color-blush-red;
+  }
+}
+
+/* Change the input color autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+  &.is-error {
+    -webkit-box-shadow: 0 0 0 30px $color-amour-violet inset;
+  }
+  &:not(.is-error) {
+    -webkit-box-shadow: 0 0 0 30px $color-white inset;
+  }
+}
+
+.form-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  
+  a {
+    @include font-size(1.3rem, normal, 1, unset, $color-egg-blue);
+    display: inline;
+  }
+
+  i {
+    margin-left: 5px;
+    color: $color-egg-blue;
+  }
+}
+
+.form-links-signIn {
+  align-items: baseline;
+  flex-direction: column;
+
+  a {
+    margin-top: 1.5rem;
+  }
+}
+
+.form-links-register {
+  align-items: baseline;
+  flex-direction: column-reverse;
+
+  p {
+    @include font-size(1.3rem, normal, 1.5, unset, $color-suva-grey);
+    text-align: unset;
+    margin-bottom: 2rem;
+  }
+}
+
+.form-btn {
+  @include font-size(1.6rem, normal, unset, uppercase, unset);
+
+  @include button(
+    $color-steel-grey,
+    transparent,
+    $color-empress-grey,
+    $color-smoke-white,
+    $color-egg-blue,
+    $color-egg-blue
+  );
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.form-check {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.form-check-input {
+  margin: 0;
+  min-width: 16px;
+  min-height: 18px;
+
+  border: 2px solid $color-gainsboro-white;
+  outline: none;
+  appearance: auto;
+}
+
+.form-check-span {
+  @include font-size(1.3rem, normal, 1.5, unset, $color-suva-grey);
+  margin-left: 1rem;
+}
+
+@include Responsive(SM) {
+  .signIn, .register {
+    padding: 0 2rem;
+  }
+  .form-links-signIn {
+    align-items: center;
+    flex-direction: row;
+  
+    a {
+      margin-top: 0;
+    }
+  }
+}
+
+@include Responsive(MD) {
+  .signIn-register__content {
+    flex-direction: row;
+    row-gap: 0;
+  }
+  .signIn, .register {
+    width: 50%;
+    padding: 0 3.5rem;
+  }
+  .signIn {
+    border-right: 2px solid $color-smoke-white-bold;
+  }
+
+  .form-label {
+    margin-bottom: 3rem;
+  }
+  .form-control {
+    margin: 1.5rem 0;
+  }
+  .form-links {
+    margin-top: 1.5rem;
+    
+    a {
+      font-size: 1.5rem;
+    }
+  }
+  .form-check {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .form-check-input {
+    min-width: 20px;
+    min-height: 20px;
+  }
+  .form-check-span {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  .form-links-register {
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@include Responsive(LG) {
+  .form-links-register {
+    align-items: center;
+    flex-direction: row;
+
+    p {
+      text-align: right;
+      margin-bottom: 0;
+    }
+  }
+}

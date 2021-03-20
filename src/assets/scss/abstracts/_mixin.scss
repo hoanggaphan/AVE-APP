@@ -4,8 +4,10 @@
 @mixin button($color, $bg-color, $border-color, $color-hover, $bg-color-hover, $border-color-hover) {
   padding: 2rem 3rem;
   color: $color;
-  background-color: $bg-color;
+  letter-spacing: 2px;
+  
   border: 2px solid $border-color;
+  background-color: $bg-color;
   transition: all .3s;
 
   &:hover {
