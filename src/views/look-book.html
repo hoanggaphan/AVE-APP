@@ -22,7 +22,200 @@
     <div class="wrapper">
       <%=require('html-loader!./components/header.html')%>
       <main>
+        <div class="brand">
+          <img class="brand__img"
+          src=<%=require('../assets/images/brand-bg.jpg')%> alt="brand
+          background">
+          <div class="brand__cover"></div>
 
+          <div class="brand__content">
+            <h2 class="brand__title"><b>Our</b> lookbook</h2>
+            <p class="brand__slogan">Latest Posts - mens & womens</p>
+          </div>
+        </div>
+
+        <div class="products-container">
+          <div class="products">
+            <ul class="nav-tabs">
+              <li class="is-tab-active" data-tab-target="#latest">Latest</li>
+              <li data-tab-target="#most-liked">Most liked</li>
+              <li data-tab-target="#best-sellers">Best Sellers</li>
+              <li data-tab-target="#price-low-to-high">price low to high</li>
+              <li data-tab-target="#price-high-to-low">price high to low</li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane is-tab-active" id="latest" data-tab-content>
+                <div class="gallery">
+                  <figure class="gallery__item gallery__item--01">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-01.jpg')%>
+                      alt="Image 1" loading="lazy">
+                    </a>
+                    <span class="gallery__price"><sup>Ref</sup>m1</span>
+
+                    <div class="gallery__hover">
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail.png')%> >
+                      </a>
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail-02.png')%> >
+                      </a>
+                    </div>
+                  </figure>
+                  <figure class="gallery__item gallery__item--02">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-02.jpg')%>
+                      alt="Image 2" loading="lazy">
+                    </a>
+
+                    <span class="gallery__price"><sup>Ref</sup>w1</span>
+
+                    <div class="gallery__hover">
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail.png')%> >
+                      </a>
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail-02.png')%> >
+                      </a>
+                    </div>
+                  </figure>
+                  <figure class="gallery__item gallery__item--03">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-03.jpg')%>
+                      alt="Image 3" loading="lazy">
+                    </a>
+                  </figure>
+                  <figure class="gallery__item gallery__item--04">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-04.jpg')%>
+                      alt="Image 4" loading="lazy">
+                    </a>
+
+                    <span class="gallery__price"><sup>Ref</sup>mj1</span>
+
+                    <div class="gallery__hover">
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail.png')%> >
+                      </a>
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail-02.png')%> >
+                      </a>
+                    </div>
+                  </figure>
+                  <figure class="gallery__item gallery__item--05">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-05.jpg')%>
+                      alt="Image 5" loading="lazy">
+                    </a>
+
+                    <span class="gallery__price"><sup>Ref</sup>m2</span>
+
+                    <div class="gallery__hover">
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail.png')%> >
+                      </a>
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail-02.png')%> >
+                      </a>
+                    </div>
+                  </figure>
+                  <figure class="gallery__item gallery__item--06">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-06.jpg')%>
+                      alt="Image 6" loading="lazy">
+                    </a>
+
+                    <span class="gallery__price"><sup>Ref</sup>w2</span>
+
+                    <div class="gallery__hover">
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail.png')%> >
+                      </a>
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail-02.png')%> >
+                      </a>
+                    </div>
+                  </figure>
+                  <figure class="gallery__item gallery__item--07">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-07.jpg')%>
+                      alt="Image 6" loading="lazy">
+                    </a>
+
+                    <span class="gallery__price"><sup>Ref</sup>w3</span>
+
+                    <div class="gallery__hover">
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail.png')%> >
+                      </a>
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail-02.png')%> >
+                      </a>
+                    </div>
+                  </figure>
+                  <figure class="gallery__item gallery__item--08">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-08.jpg')%>
+                      alt="Image 6" loading="lazy">
+                    </a>
+                  </figure>
+                  <figure class="gallery__item gallery__item--09">
+                    <a class="gallery__img" href="#">
+                      <img class="lazyload"
+                      data-src=<%=require('../assets/images/item-09.jpg')%>
+                      alt="Image 6" loading="lazy">
+                    </a>
+                    <span class="gallery__price"><sup>Ref</sup>w4</span>
+
+                    <div class="gallery__hover">
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail.png')%> >
+                      </a>
+                      <a href="#" class="gallery__hover-details-link">
+                        <img
+                        src=<%=require('../assets/images/icon-detail-02.png')%> >
+                      </a>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+              <div class="tab-pane" id="most-liked" data-tab-content>
+                Comming soon...
+              </div>
+              <div class="tab-pane" id="best-sellers" data-tab-content>
+                Comming soon...
+              </div>
+              <div class="tab-pane" id="price-low-to-high" data-tab-content>
+                Comming soon...
+              </div>
+              <div class="tab-pane" id="price-high-to-low" data-tab-content>
+                Comming soon...
+              </div>
+            </div>
+          </div>
+        </div>
 
         <%=require('html-loader?interpolate!./components/list-look-book.html') %>
       </main>
