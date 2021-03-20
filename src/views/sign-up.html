@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%=require('html-loader!./components/header.html')%>
+      <main>
+        <div class="brand">
+          <img class="brand__img"
+          src=<%=require('../assets/images/brand-bg.jpg')%> alt="brand
+          background">
+          <div class="brand__cover"></div>
+
+          <div class="brand__content">
+            <h2 class="brand__title"><b>Welcome</b> to ave</h2>
+            <p class="brand__slogan">sign in or register</p>
+          </div>
+        </div>
+
+        <div class="signIn-register">
+          <div class="container">
+            <div class="signIn-register__content">
+              <div class="signIn">
+                <form class="form">
+                  <label class="form-label" for="email-signIn">Sign In</label>
+                  <input
+                    class="form-control is-error"
+                    required
+                    type="email"
+                    name="email-signIn"
+                    id="email-signIn"
+                    placeholder="Your Email."
+                  />
+                  <input
+                    class="form-control"
+                    required
+                    type="password"
+                    name="password-signIn"
+                    id="password-signIn"
+                    placeholder="Your Password."
+                  />
+                  <div class="form-links form-links-signIn">
+                    <button class="form-btn" type="submit">Sign in</button>
+                    <a href="#"
+                      >Forgot your Password<i
+                        class="fa fa-long-arrow-alt-right"
+                      ></i
+                    ></a>
+                  </div>
+                </form>
+              </div>
+              <div class="register">
+                <form class="form">
+                  <label class="form-label" for="email-register"
+                    >Register</label
+                  >
+                  <input
+                    class="form-control"
+                    required
+                    type="email"
+                    name="email-register"
+                    id="email-register"
+                    placeholder="Your Email."
+                  />
+                  <input
+                    class="form-control"
+                    required
+                    type="password"
+                    name="password-register"
+                    id="password-register"
+                    placeholder="Your Password."
+                  />
+                  <input
+                    class="form-control"
+                    required
+                    type="password"
+                    name="confirm-password"
+                    id="confirm-password"
+                    placeholder="Confirm Password."
+                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      required
+                      type="checkbox"
+                      value=""
+                      id="check-register"
+                    />
+                    <span class="form-check-span"
+                      >Sign up for exclusive updates, discounts, new arrivals,
+                      contests, and more!</span
+                    >
+                  </div>
+                  <div class="form-links form-links-register">
+                    <button class="form-btn" type="submit">
+                      Create Account
+                    </button>
+                    <p>
+                      By clicking ‘Create Account’, you agree to our
+                      <a href="#">Privacy Policy</a
+                      ><i class="fa fa-long-arrow-alt-right"></i>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%=require('html-loader!./components/footer.html')%>
+    </div>
+  </body>
+</html>
