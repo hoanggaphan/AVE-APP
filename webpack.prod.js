@@ -7,13 +7,9 @@ const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
 module.exports = merge(common, {
   mode: 'production',
 
-  output: {
-    filename: '[name].[contenthash].js',
-  },
-
   plugins: [
-    new MiniCssExtractPlugin(),
-    new HTMLInlineCSSWebpackPlugin(),
+    new MiniCssExtractPlugin(), // tách css thành file riêng
+    new HTMLInlineCSSWebpackPlugin(), // tiêm css vào head và bỏ file css
   ],
 
   module: {

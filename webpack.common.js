@@ -3,17 +3,53 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    index: ['./src/assets/js/index.js', './src/assets/scss/pages/index.scss'],
-    brand: ['./src/assets/js/brand.js', './src/assets/scss/pages/brand.scss'],
-    localStores: ['./src/assets/js/local-stores.js', './src/assets/scss/pages/local-stores.scss'],
-    lookBook: ['./src/assets/js/look-book.js', './src/assets/scss/pages/look-book.scss'],
-    signUp: ['./src/assets/js/sign-up.js', './src/assets/scss/pages/sign-up.scss'],
-    product: ['./src/assets/js/product.js', './src/assets/scss/pages/product.scss'],
+    index: {
+      import: [
+        './src/assets/js/index.js',
+        './src/assets/scss/pages/index.scss',
+      ],
+      filename: 'assets/js/[name].js',
+    },
+    brand: {
+      import: [
+        './src/assets/js/brand.js',
+        './src/assets/scss/pages/brand.scss',
+      ],
+      filename: 'assets/js/[name].js',
+    },
+    localStores: {
+      import: [
+        './src/assets/js/local-stores.js',
+        './src/assets/scss/pages/local-stores.scss',
+      ],
+      filename: 'assets/js/[name].js',
+    },
+    lookBook: {
+      import: [
+        './src/assets/js/look-book.js',
+        './src/assets/scss/pages/look-book.scss',
+      ],
+      filename: 'assets/js/[name].js',
+    },
+    signUp: {
+      import: [
+        './src/assets/js/sign-up.js',
+        './src/assets/scss/pages/sign-up.scss',
+      ],
+      filename: 'assets/js/[name].js',
+    },
+    product: {
+      import: [
+        './src/assets/js/product.js',
+        './src/assets/scss/pages/product.scss',
+      ],
+      filename: 'assets/js/[name].js',
+    },
   },
 
   output: {
-    path: path.resolve(__dirname, 'build'),
-    assetModuleFilename: 'asset/images/[base]',
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/images/[base]',
     clean: true,
   },
 
