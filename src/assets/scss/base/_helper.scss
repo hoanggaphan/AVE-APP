@@ -2,10 +2,6 @@
   display: none;
 }
 
-[data-tab-target].is-tab-active {
-  color: $color-egg-blue;
-}
-
 [data-tab-content].is-tab-active {
   display: block;
 }

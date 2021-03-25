@@ -41,6 +41,10 @@
 .brand__slogan {
   @include font-size(2rem, normal, 2, uppercase, $color-white);
   line-height: 2;
+
+  span {
+    color: $color-egg-blue;
+  }
 }
 
 @include Responsive(SM) {
