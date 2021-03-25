@@ -9,6 +9,7 @@ module.exports = {
     localStores: ['./src/assets/js/local-stores.js', './src/assets/scss/pages/local-stores.scss'],
     lookBook: ['./src/assets/js/look-book.js', './src/assets/scss/pages/look-book.scss'],
     signUp: ['./src/assets/js/sign-up.js', './src/assets/scss/pages/sign-up.scss'],
+    product: ['./src/assets/js/product.js', './src/assets/scss/pages/product.scss'],
   },
 
   output: {
@@ -50,6 +51,13 @@ module.exports = {
       filename: 'sign-up.html',
       template: './src/views/sign-up.html',
       chunks: ['signUp'],
+      inject: 'body',
+      scriptLoading: 'blocking',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'product.html',
+      template: './src/views/product.html',
+      chunks: ['product'],
       inject: 'body',
       scriptLoading: 'blocking',
     }),
