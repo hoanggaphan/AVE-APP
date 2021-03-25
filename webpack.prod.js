@@ -3,7 +3,6 @@ const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
   .default;
-const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -13,7 +12,6 @@ module.exports = merge(common, {
   },
 
   plugins: [
-    new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin(),
     new HTMLInlineCSSWebpackPlugin(),
   ],
